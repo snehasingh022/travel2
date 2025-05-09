@@ -1,0 +1,226 @@
+/* General Reset and Body Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+}
+
+/* Container for light and dark mode */
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Dark Mode */
+.container.dark {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+/* Light Mode */
+.container.light {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #3b82f6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.header .subtitle {
+  font-size: 1rem;
+  color: #888;
+  font-weight: 400;
+}
+
+/* Input Fields */
+.input {
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  background-color: #f7f7f7;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+.input:focus {
+  border-color: #3b82f6;
+  background-color: #e6f2ff;
+  outline: none;
+}
+
+/* Option Buttons */
+.options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.option-button {
+  padding: 1.2rem;
+  background-color: #444;
+  color: white;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.option-button:hover {
+  background-color: #1e40af;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.option-button.selected {
+  background-color: #1e40af;
+  font-weight: 700;
+}
+
+/* Continue Button */
+.continue-button {
+  width: 100%;
+  padding: 1.2rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.continue-button:hover {
+  background-color: #1e40af;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Trip Container Styles */
+.trip-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #3b82f6, #9333ea);
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 3rem;
+  text-align: center;
+  border-radius: 0.75rem;
+  transition: background 0.4s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.trip-container h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+}
+
+.trip-container p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .input, .option-button, .continue-button {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .trip-container {
+    font-size: 2.5rem;
+    padding: 2rem;
+  }
+
+  .trip-container h2 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .input, .option-button, .continue-button {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .options {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .trip-container {
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+
+  .trip-container h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .input, .option-button, .continue-button {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .trip-container {
+    font-size: 1.8rem;
+    padding: 1rem;
+  }
+
+  .trip-container h2 {
+    font-size: 2.5rem;
+  }
+}
